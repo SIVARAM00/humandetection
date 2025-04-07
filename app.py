@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Load MobileNet SSD model
 prototxt = "deploy.prototxt.txt"
-model = "res10_300x300_ssd_iter_140000_fp16.caffemodel"
+model = "res10_300x300_ssd_iter_140000.caffemodel"
 net = cv2.dnn.readNetFromCaffe(prototxt, model)
 
 @app.route("/detect", methods=["POST"])
